@@ -232,7 +232,7 @@ router.delete('/departamentos/:id', function ( req, res, next ){
         });
     }).catch( function ( error ){
         res.status(500).json({
-            message: `Ha ocurrido un error al eliminar el departamento. error: ${error.message}`,
+            message: error.name == 'SequelizeForeignKeyConstraintError' ? 'El departamento se encuentra relacionado a un empleado' : `Ha ocurrido un error al eliminar el departamento. error: ${error.message}`,
         });
     });
 });
