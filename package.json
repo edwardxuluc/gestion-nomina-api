@@ -28,7 +28,7 @@
         "parse5": "^5.1.0",
         "request": "^2.88.0",
         "rotating-file-stream": "^2.0.0",
-        "sequelize": "^3.5.1",
+        "sequelize": "^5.15.1",
         "validate": "^5.1.0"
     }
 }
